@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Simple word replacer
 // @namespace   http://tampermonkey.net/
-// @version     1.4
+// @version     1.5
 // @description Replaces words on websites.
 // @author      DCI Marc
 // @match       *://*/*
@@ -84,8 +84,8 @@
     function replaceWordsInTextNode(node) {
         let text = node.nodeValue;
         for (const [original, replacement] of Object.entries(wordReplacements)) {
-            const regex = new RegExp(`(^|\\s)(${original})(-)?`, 'gi');
-            text = text.replace(regex, replacement);
+            const regex = new RegExp(`(^|\\s|\\b)(${original})(-|\\b)`, 'gi');
+            text = text.replace(regex, `$1${replacement}$3`);
         }
         node.nodeValue = text;
     }

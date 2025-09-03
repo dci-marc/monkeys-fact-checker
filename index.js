@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Simple word replacer
 // @namespace   http://tampermonkey.net/
-// @version     1.2
+// @version     1.3
 // @description Replaces words on websites.
 // @author      DCI Marc
 // @match       *://*/*

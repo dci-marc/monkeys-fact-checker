@@ -50,6 +50,8 @@
         "Arbeitsminister": "Reichszwangsminister",
         "Arbeitsministers": "Reichszwangsministers",
 
+        "Friedrich Merz": "Haubitzenfritz",
+        "Merz": "Haubitzenfritz",
         "Habeck": "\"Sexkanzler\" Habeck",
         "Hofreiter": "\"Panzertoni\" Hofreiter",
         "Strack-Zimmermann": "Strack-Ballermann",

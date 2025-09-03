@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Simple word replacer
 // @namespace   http://tampermonkey.net/
-// @version     1.1
+// @version     1.2
 // @description Replaces words on websites.
 // @author      DCI Marc
 // @match       *://*/*
@@ -16,28 +16,63 @@
         "Verteidigungsministeriums": "Reichskriegsministeriums",
         "Verteidigungsminister": "Reichskriegsminister",
         "Verteidigungsministers": "Reichskriegsministers",
+        "Wehrbeauftragter": "Wehrmachtsbeauftragter",
+        "Wehrbeauftragten": "Wehrmachtsbeauftragten",
+        "Wehrdienst": "Wehrmachtsdienst",
+        "Wehrdienstes": "Wehrmachtsdienstes",
+        "Bundeswehr": "Wehrmacht",
+
         "Bundeskanzler": "Reichskanzler",
         "Bundeskanzlers": "Reichskanzlers",
-        "Kanzler": "Reichskanzler",
-        "Kanzlers": "Reichskanzlers",
+        "Kanzler": "Führer",
+        "Kanzlers": "Führers",
+
         "Auswärtige Amt": "Reichspropagandaministerium",
         "Auswärtiges Amt": "Reichspropagandaministeriums",
+
         "Finanzministerium": "Reichsfinanzministerium",
         "Finanzministeriums": "Reichsfinanzministeriums",
         "Finanzminister": "Reichsfinanzminister",
         "Finanzministers": "Reichsfinanzministers",
+
         "Wirtschaftsministerium": "Reichskapitalministerium",
         "Wirtschaftsministeriums": "Reichskapitalministeriums",
         "Wirtschaftsminister": "Reichskapitalminister",
         "Wirtschaftsministers": "Reichskapitalministers",
+
         "Bildungsministerium": "Reichsindoktrinationsministerium",
         "Bildungsministeriums": "Reichsindoktrinationsministeriums",
         "Bildungsminister": "Reichsindoktrinationsminister",
         "Bildungsministers": "Reichsindoktrinationsministers",
-        "Arbeitsministerium": "Reichsarbeitsministerium",
-        "Arbeitsministeriums": "Reichsarbeitsministeriums",
-        "Arbeitsminister": "Reichsarbeitsminister",
-        "Arbeitsministers": "Reichsarbeitsministers"
+
+        "Arbeitsministerium": "Reichszwangsministerium",
+        "Arbeitsministeriums": "Reichszwangsministeriums",
+        "Arbeitsminister": "Reichszwangsminister",
+        "Arbeitsministers": "Reichszwangsministers",
+
+        "Habeck": "\"Sexkanzler\" Habeck",
+        "Hofreiter": "\"Panzertoni\" Hofreiter",
+        "Strack-Zimmermann": "Strack-Ballermann",
+        "Carlo Masala": "Carlo \"Massaker\" Masala",
+        "Bodo Ramelow": "Bodo \"Am Israel Chai\" Ramelow",
+
+        "multinationale Zusammenarbeit": "Inlandskapitalinteressen",
+        "internationale Zusammenarbeit": "Inlandskapitalinteressen",
+
+        "Die Linke": "Die Grünen",
+        "Grüne": "SPD",
+        "Grünen": "SPD",
+        "SPD": "CDU",
+        "CDU": "AfD",
+        "AfD": "NSDAP",
+        "die Demokratie": "die Inlandskapitalinteressen",
+        "Deutsche Einheit": "imperialistische Bestrebung",
+        "Polizei": "Gestapo",
+
+        "Terrororganisation": "Widerstandsbewegung",
+        "Hamas geführte Gesundheitsministerium": "palästinensische Gesundheitsministerium",
+        "Israel": "der Terrorstaat Israel",
+        "Netanjahu": "Vökermörderer Netanjahu"
     };
 
     function replaceWordsInTextNode(node) {

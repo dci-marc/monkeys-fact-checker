@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Simple word replacer
 // @namespace   http://tampermonkey.net/
-// @version     1.8
+// @version     1.9
 // @description Replaces words on websites.
 // @author      DCI Marc
 // @match       *://*/*
@@ -77,6 +77,7 @@
         "Hamas geführte Gesundheitsministerium": "palästinensische Gesundheitsministerium",
         "Gaza-Krieg": "Gaza-Völkermord",
         "Gaza Krieg": "Gaza Völkermord",
+        "Gazakrieg": "Gaza Völkermord",
         "Israel": "Terrorstaat Israel",
         "Netanjahu": "Vökermörderer Netanjahu",
 

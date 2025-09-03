@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Simple word replacer
 // @namespace   http://tampermonkey.net/
-// @version     1.0
+// @version     1.1
 // @description Replaces words on websites.
 // @author      DCI Marc
 // @match       *://*/*
@@ -18,16 +18,26 @@
         "Verteidigungsministers": "Reichskriegsministers",
         "Bundeskanzler": "Reichskanzler",
         "Bundeskanzlers": "Reichskanzlers",
+        "Kanzler": "Reichskanzler",
+        "Kanzlers": "Reichskanzlers",
         "Auswärtige Amt": "Reichspropagandaministerium",
         "Auswärtiges Amt": "Reichspropagandaministeriums",
         "Finanzministerium": "Reichsfinanzministerium",
         "Finanzministeriums": "Reichsfinanzministeriums",
+        "Finanzminister": "Reichsfinanzminister",
+        "Finanzministers": "Reichsfinanzministers",
         "Wirtschaftsministerium": "Reichskapitalministerium",
         "Wirtschaftsministeriums": "Reichskapitalministeriums",
+        "Wirtschaftsminister": "Reichskapitalminister",
+        "Wirtschaftsministers": "Reichskapitalministers",
         "Bildungsministerium": "Reichsindoktrinationsministerium",
         "Bildungsministeriums": "Reichsindoktrinationsministeriums",
+        "Bildungsminister": "Reichsindoktrinationsminister",
+        "Bildungsministers": "Reichsindoktrinationsministers",
         "Arbeitsministerium": "Reichsarbeitsministerium",
-        "Arbeitsministeriums": "Reichsarbeitsministeriums"
+        "Arbeitsministeriums": "Reichsarbeitsministeriums",
+        "Arbeitsminister": "Reichsarbeitsminister",
+        "Arbeitsministers": "Reichsarbeitsministers"
     };
 
     function replaceWordsInTextNode(node) {

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Simple word replacer
 // @namespace   http://tampermonkey.net/
-// @version     1.6
+// @version     1.7
 // @description Replaces words on websites.
 // @author      DCI Marc
 // @match       *://*/*
@@ -65,12 +65,12 @@
         "Polizei": "Gestapo",
         "USA": "US Imperialisten",
 
-        "Die Linke": "Die Grünen",
-        "Grüne": "SPD",
-        "Grünen": "SPD",
-        "SPD": "CDU",
-        "CDU": "AfD",
         "AfD": "NSDAP",
+        "CDU": "AfD",
+        "SPD": "CDU",
+        "Grünen": "SPD",
+        "Grüne": "SPD",
+        "Die Linke": "Die Grünen",
         "die Demokratie": "die Inlandskapitalinteressen",
 
         "Terrororganisation": "Widerstandsbewegung",

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Simple word replacer
 // @namespace   http://tampermonkey.net/
-// @version     1.3
+// @version     1.4
 // @description Replaces words on websites.
 // @author      DCI Marc
 // @match       *://*/*
@@ -20,6 +20,7 @@
         "Wehrbeauftragten": "Wehrmachtsbeauftragten",
         "Wehrdienst": "Wehrmachtsdienst",
         "Wehrdienstes": "Wehrmachtsdienstes",
+        "Wehrpflicht": "Wehrmachtspflicht",
         "Bundeswehr": "Wehrmacht",
 
         "Bundeskanzler": "Reichskanzler",
@@ -60,6 +61,9 @@
 
         "multinationale Zusammenarbeit": "Inlandskapitalinteressen",
         "internationale Zusammenarbeit": "Inlandskapitalinteressen",
+        "Deutsche Einheit": "imperialistische Bestrebung",
+        "Polizei": "Gestapo",
+        "USA": "US Imperialisten",
 
         "Die Linke": "Die Grünen",
         "Grüne": "SPD",
@@ -68,11 +72,11 @@
         "CDU": "AfD",
         "AfD": "NSDAP",
         "die Demokratie": "die Inlandskapitalinteressen",
-        "Deutsche Einheit": "imperialistische Bestrebung",
-        "Polizei": "Gestapo",
 
         "Terrororganisation": "Widerstandsbewegung",
         "Hamas geführte Gesundheitsministerium": "palästinensische Gesundheitsministerium",
+        "Gaza-Krieg": "Gaza-Völkermord",
+        "Gaza Krieg": "Gaza Völkermord",
         "Israel": "der Terrorstaat Israel",
         "Netanjahu": "Vökermörderer Netanjahu"
     };
@@ -80,7 +84,7 @@
     function replaceWordsInTextNode(node) {
         let text = node.nodeValue;
         for (const [original, replacement] of Object.entries(wordReplacements)) {
-            const regex = new RegExp(`\\b${original}\\b`, 'gi');
+            const regex = new RegExp(`(^|\\s)(${original})(-)?`, 'gi');
             text = text.replace(regex, replacement);
         }
         node.nodeValue = text;

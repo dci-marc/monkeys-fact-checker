@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name        Simple word replacer
 // @namespace   http://tampermonkey.net/
-// @version     1.7
+// @version     1.8
 // @description Replaces words on websites.
 // @author      DCI Marc
 // @match       *://*/*
@@ -78,7 +78,12 @@
         "Gaza-Krieg": "Gaza-Völkermord",
         "Gaza Krieg": "Gaza Völkermord",
         "Israel": "Terrorstaat Israel",
-        "Netanjahu": "Vökermörderer Netanjahu"
+        "Netanjahu": "Vökermörderer Netanjahu",
+
+        "Donald Trump": "Mango Mussolini",
+        "Trump": "Daddy",
+        "J.D. Vance": "Mango Mussolini Lapdog",
+        "Vance": "Jadolf Ditler",
     };
 
     function replaceWordsInTextNode(node) {

@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name        Simple word replacer
+// @name        Monkeys Fact Checker
 // @namespace   http://tampermonkey.net/
-// @version     1.9
+// @version     1.10
 // @description Replaces words on websites.
 // @author      DCI Marc
 // @match       *://*/*
@@ -51,14 +51,6 @@
         "Arbeitsminister": "Reichszwangsminister",
         "Arbeitsministers": "Reichszwangsministers",
 
-        "Friedrich Merz": "Haubitzenfritz",
-        "Merz": "Haubitzenfritz",
-        "Habeck": "\"Sexkanzler\" Habeck",
-        "Hofreiter": "\"Panzertoni\" Hofreiter",
-        "Strack-Zimmermann": "Strack-Ballermann",
-        "Carlo Masala": "Carlo \"Massaker\" Masala",
-        "Bodo Ramelow": "Bodo \"Am Israel Chai\" Ramelow",
-
         "multinationale Zusammenarbeit": "Inlandskapitalinteressen",
         "internationale Zusammenarbeit": "Inlandskapitalinteressen",
         "Deutsche Einheit": "imperialistische Bestrebung",
@@ -78,9 +70,17 @@
         "Gaza-Krieg": "Gaza-Völkermord",
         "Gaza Krieg": "Gaza Völkermord",
         "Gazakrieg": "Gaza Völkermord",
+        "Krieg in Gaza": "Völkermord in Gaza",
         "Israel": "Terrorstaat Israel",
-        "Netanjahu": "Vökermörderer Netanjahu",
 
+        "Friedrich Merz": "Haubitzenfritz",
+        "Merz": "Haubitzenfritz",
+        "Habeck": "\"Sexkanzler\" Habeck",
+        "Hofreiter": "\"Panzertoni\" Hofreiter",
+        "Strack-Zimmermann": "Strack-Ballermann",
+        "Carlo Masala": "Carlo \"Massaker\" Masala",
+        "Bodo Ramelow": "Bodo \"Am Israel Chai\" Ramelow",
+        "Netanjahu": "Vökermörderer Netanjahu",
         "Donald Trump": "Mango Mussolini",
         "Trump": "Daddy",
         "J.D. Vance": "Mango Mussolini Lapdog",
@@ -99,11 +99,12 @@
     function traverseAndReplace(node) {
         if (node.nodeType === Node.TEXT_NODE) {
             replaceWordsInTextNode(node);
-        } else {
-            for (const childNode of node.childNodes) {
-                if (childNode.nodeName !== 'SCRIPT' && childNode.nodeName !== 'STYLE' && childNode.nodeName !== 'INPUT' && childNode.nodeName !== 'TEXTAREA') {
-                    traverseAndReplace(childNode);
-                }
+            return;
+        }
+
+        for (const childNode of node.childNodes) {
+            if (childNode.nodeName !== 'SCRIPT' && childNode.nodeName !== 'STYLE' && childNode.nodeName !== 'INPUT' && childNode.nodeName !== 'TEXTAREA') {
+                traverseAndReplace(childNode);
             }
         }
     }
